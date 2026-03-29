@@ -1,0 +1,124 @@
+.section {
+  margin: 4px 0 12px;
+}
+
+.heading {
+  color: var(--terminal-accent);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.separator {
+  color: var(--terminal-muted);
+  margin-bottom: 8px;
+}
+
+.text {
+  color: var(--terminal-fg);
+}
+
+.dim {
+  color: var(--terminal-fg-dim);
+}
+
+.bright {
+  color: var(--terminal-fg-bright);
+}
+
+.accent {
+  color: var(--terminal-accent);
+}
+
+.error {
+  color: var(--terminal-error);
+}
+
+.warning {
+  color: var(--terminal-warning);
+}
+
+.link {
+  color: var(--terminal-accent);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.link:hover {
+  color: var(--terminal-fg-bright);
+}
+
+/* ── Skill bar ───────────────────────────────────────────── */
+
+.skillRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.skillName {
+  width: 140px;
+  color: var(--terminal-fg);
+  text-align: right;
+}
+
+.skillBar {
+  display: flex;
+  gap: 2px;
+}
+
+.skillBlock {
+  width: 16px;
+  height: 12px;
+  border-radius: 1px;
+}
+
+.skillBlockFilled {
+  background: var(--terminal-fg);
+}
+
+.skillBlockEmpty {
+  background: var(--chrome-border);
+}
+
+/* ── Timeline ────────────────────────────────────────────── */
+
+.timelineEntry {
+  margin-bottom: 12px;
+  padding-left: 16px;
+  border-left: 2px solid var(--chrome-border);
+}
+
+.timelineRole {
+  color: var(--terminal-fg-bright);
+  font-weight: bold;
+}
+
+.timelineCompany {
+  color: var(--terminal-accent);
+}
+
+.timelinePeriod {
+  color: var(--terminal-muted);
+  font-style: italic;
+}
+
+.timelineDesc {
+  color: var(--terminal-fg-dim);
+  margin: 4px 0;
+}
+
+.listItem {
+  color: var(--terminal-fg);
+}
+
+.listBullet {
+  color: var(--terminal-fg-dim);
+}
+
+/* ── Highlight list ──────────────────────────────────────── */
+
+.highlightItem {
+  margin-bottom: 2px;
+}

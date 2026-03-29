@@ -1,0 +1,164 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: var(--terminal-bg);
+}
+
+.window {
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 80px var(--glow-color);
+  border: 1px solid var(--chrome-border);
+}
+
+/* ── Title bar chrome ────────────────────────────────────── */
+
+.chrome {
+  display: flex;
+  align-items: center;
+  height: var(--chrome-height);
+  padding: 0 14px;
+  background: var(--chrome-bg);
+  border-bottom: 1px solid var(--chrome-border);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dotClose {
+  background: var(--chrome-dot-close);
+}
+
+.dotMinimize {
+  background: var(--chrome-dot-minimize);
+}
+
+.dotMaximize {
+  background: var(--chrome-dot-maximize);
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  color: var(--terminal-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* ── Output area ─────────────────────────────────────────── */
+
+.output {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--terminal-padding);
+  background: var(--terminal-bg);
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--terminal-fg);
+  scrollbar-width: thin;
+  scrollbar-color: var(--chrome-border) transparent;
+}
+
+.output::-webkit-scrollbar {
+  width: 6px;
+}
+
+.output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.output::-webkit-scrollbar-thumb {
+  background: var(--chrome-border);
+  border-radius: 3px;
+}
+
+/* ── Input line ──────────────────────────────────────────── */
+
+.inputLine {
+  display: flex;
+  align-items: center;
+  padding: 8px var(--terminal-padding);
+  background: var(--terminal-bg);
+  border-top: 1px solid var(--chrome-border);
+  flex-shrink: 0;
+}
+
+.prompt {
+  color: var(--terminal-accent);
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  white-space: pre;
+  user-select: none;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--terminal-fg);
+  font-family: var(--font-mono);
+  font-size: var(--font-size);
+  caret-color: var(--terminal-fg);
+  padding: 0;
+  margin: 0;
+}
+
+.input::placeholder {
+  color: var(--terminal-muted);
+}
+
+/* ── Line rendering ──────────────────────────────────────── */
+
+.line {
+  margin-bottom: 2px;
+}
+
+.lineInput {
+  color: var(--terminal-fg);
+}
+
+.lineOutput {
+  color: var(--terminal-fg);
+}
+
+/* ── Scanline effect ─────────────────────────────────────── */
+
+.scanlines {
+  position: relative;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, var(--scanline-opacity)) 0px,
+    rgba(0, 0, 0, var(--scanline-opacity)) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}

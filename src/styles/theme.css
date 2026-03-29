@@ -1,0 +1,33 @@
+:root {
+  /* Terminal colors */
+  --terminal-bg: #1a1a2e;
+  --terminal-fg: #33ff33;
+  --terminal-fg-dim: #1a991a;
+  --terminal-fg-bright: #66ff66;
+  --terminal-accent: #00d4ff;
+  --terminal-error: #ff4444;
+  --terminal-warning: #ffaa00;
+  --terminal-muted: #666680;
+  --terminal-selection: rgba(51, 255, 51, 0.15);
+
+  /* Chrome colors */
+  --chrome-bg: #16162a;
+  --chrome-border: #2a2a4a;
+  --chrome-dot-close: #ff5f57;
+  --chrome-dot-minimize: #ffbd2e;
+  --chrome-dot-maximize: #28c840;
+
+  /* Typography */
+  --font-mono:
+    "Fira Code", "JetBrains Mono", "Cascadia Code", "Consolas", monospace;
+  --font-size: 14px;
+  --line-height: 1.6;
+
+  /* Spacing */
+  --terminal-padding: 16px;
+  --chrome-height: 40px;
+
+  /* Effects */
+  --glow-color: rgba(51, 255, 51, 0.1);
+  --scanline-opacity: 0.03;
+}
