@@ -147,11 +147,11 @@ export const cv: CVData = {
 
   projects: [
     {
-      name: "Case opening",
+      name: "Reddit To TikTok",
       description:
-        "A web-based CS2 case opening simulator with a zero-to-hero progression system. Start with nothing, open cases, build your inventory, and try to profit (spoiler: the house always wins).",
-      tech: ["React", "TypeScript", "Vite", "Tailwind", "Framer Motion"],
-      url: "https://xmichsenx.github.io/caseopening/",
+        "Turn any Reddit thread into a TikTok-ready video. Paste a URL, pick comments, choose a background — out comes a 1080x1920 vertical video with TTS narration.",
+      tech: ["Python", "MoviePy", "Pillow", "edge-tts"],
+      url: "https://github.com/xmichsenx/RedditToTiktok",
     },
   ],
 };
